@@ -35,3 +35,10 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### pptx
+*.pptx
+
+### application properties
+src/main/resources/application.properties
+
