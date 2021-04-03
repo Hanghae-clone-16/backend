@@ -2,7 +2,7 @@
 
 항해99 [chapter 4]에서 진행한
 
-Spring boot와 React 를 이용한 ([velog](velog.io)) 클론코딩 프로젝트입니다.
+Spring boot와 React 를 이용한 ([velog](https://velog.io)) 클론코딩 프로젝트입니다.
 
 
 
@@ -11,16 +11,16 @@ Spring boot와 React 를 이용한 ([velog](velog.io)) 클론코딩 프로젝트
 ### Frontend
 
 * 이정주(github.com/JeongJoo-Lee)
-  * 
+  * 1
 * 길근용(github.com/TESZhao123)
-  * 
+  * 1
 
 ### Backend
 
 * 강이현(github.com/kellykang-tech)
-  * 
+  * 1
 * 홍종완(gitHub.com/jongwanhong)
-  * 
+  * 1
 
 ## API 설계
 
@@ -92,7 +92,8 @@ Spring boot와 React 를 이용한 ([velog](velog.io)) 클론코딩 프로젝트
    * SignupRequestDto : 회원가입
    * CommentReqeustDto : 댓글 수정 / 등록
 
-## 구조
+## 구조 - Backend
+![image](https://user-images.githubusercontent.com/53491653/113465588-184ed680-9470-11eb-9afd-96eb04152fdb.png)
 
 
 
