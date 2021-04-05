@@ -19,7 +19,7 @@ Spring boot와 React 를 이용한 ([velog](https://velog.io)) 클론코딩 프�
 
 * 강이현(github.com/kellykang-tech)
   * CRUD 기능 구현 / cors 설정 / 
-* 홍종완(gitHub.com/jongwanhong)
+* 홍종완(github.com/jongwanhong)
   * 환경설정 / 데이터 크롤링 / 
 
 ## API 설계
