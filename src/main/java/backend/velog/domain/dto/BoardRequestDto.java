@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class BoardRequestDto {
 
     private String title;
-    private String username;
+    private String nickname;
     private String contents;
 
 }

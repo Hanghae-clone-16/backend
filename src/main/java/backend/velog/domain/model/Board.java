@@ -21,14 +21,14 @@ public class Board extends Timestamped{
     private String title;
 
     @Column(nullable = false)
-    private String username;
+    private String nickname;
 
     @Column(nullable = false)
     private String contents;
 
 
     public Board(BoardRequestDto boardRequestDto) {
-        this.username = boardRequestDto.getUsername();
+        this.nickname = boardRequestDto.getNickname();
         this.title = boardRequestDto.getTitle();
         this.contents = boardRequestDto.getContents();
     }
@@ -36,7 +36,7 @@ public class Board extends Timestamped{
     // 왜 model에서 이 작업을 하는지 모르겠음
     public void update(BoardRequestDto boardRequestDto) {
         this.title = boardRequestDto.getTitle();
-        this.username = boardRequestDto.getUsername();
+        this.nickname = boardRequestDto.getNickname();
         this.contents = boardRequestDto.getContents();
 
     }
