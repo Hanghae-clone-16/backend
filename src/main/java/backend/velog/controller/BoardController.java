@@ -9,12 +9,19 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//@CrossOrigin(origins = {"http://localhost:8888"})
 @RestController
 @RequiredArgsConstructor
 public class BoardController {
 
     private final BoardRepository boardRepository;
     private final BoardService boardService;
+
+    // cors 테스트 -> 성공
+    @GetMapping("/api/test")
+    public String test() {
+        return "please...";
+    }
 
     // 글 작성
     @PostMapping("/api/boards")
