@@ -13,4 +13,8 @@ public class BoardRequestDto {
     private String nickname;
     private String contents;
 
+    private String img;
+    private int commentsCnt;
+    private int likeCnt;
+
 }

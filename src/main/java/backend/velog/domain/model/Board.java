@@ -20,17 +20,29 @@ public class Board extends Timestamped{
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)
+    @Column
     private String nickname;
 
     @Column(nullable = false)
     private String contents;
+
+    @Column
+    private String img;
+
+    @Column
+    private int commentsCnt;
+
+    @Column
+    private int likeCnt;
 
 
     public Board(BoardRequestDto boardRequestDto) {
         this.nickname = boardRequestDto.getNickname();
         this.title = boardRequestDto.getTitle();
         this.contents = boardRequestDto.getContents();
+        this.img = boardRequestDto.getImg();
+        this.commentsCnt = boardRequestDto.getCommentsCnt();
+        this.likeCnt = boardRequestDto.getLikeCnt();
     }
 
     // 왜 model에서 이 작업을 하는지 모르겠음
@@ -38,6 +50,7 @@ public class Board extends Timestamped{
         this.title = boardRequestDto.getTitle();
         this.nickname = boardRequestDto.getNickname();
         this.contents = boardRequestDto.getContents();
+        this.img = boardRequestDto.getImg();
 
     }
 }
