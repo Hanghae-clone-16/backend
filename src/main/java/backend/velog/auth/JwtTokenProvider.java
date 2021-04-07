@@ -18,7 +18,7 @@ import java.util.Date;
 import java.util.List;
 
 @RequiredArgsConstructor
-@Component
+@Component      // JWT를 생성하고 검증하는 컴포넌트 만들기 -> 실제 이 컴포넌트를 이용하는 것은 인증 작업을 진행하는 Filter이다.(JwtAuthenticationFilter)
 public class JwtTokenProvider {
 
     private String secretKey = "webfirewood";
@@ -26,7 +26,7 @@ public class JwtTokenProvider {
     // 토큰 유효시간 30분
     private long tokenValidTime = 30 * 60 * 1000L;
 
-    private final UserDetailsService userDetailsService;
+    private final UserDetailsService userDetailsService;        //유저네임 가지고 db에 가서 유저 정보 가져오는 녀석
 
     // 객체 초기화, secretKey를 Base64로 인코딩한다.
     @PostConstruct
