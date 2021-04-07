@@ -31,7 +31,7 @@ public class User implements UserDetails {
     @Column(length = 100, nullable = false)
     private String password;
 
-    @ElementCollection(fetch = FetchType.EAGER)
+    @ElementCollection(fetch = FetchType.EAGER)     //Embedded 삼고 싶은 프로퍼티가 Collection이므로
     @Builder.Default
     private List<String> roles = new ArrayList<>();
 
