@@ -41,8 +41,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/h2-console/**").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/user/**").hasRole("USER")
-                .anyRequest().permitAll() // 그외 나머지 요청은 누구나 접근 가능
+                .anyRequest().permitAll()
                 .and()
+//                .formLogin()//스프링 시큐리티에서 기본으로 제공하는 로그인페이지
+//                //.loginPage("url")
+//                //.failureUrl("url")
+//                .defaultSuccessUrl("/") .permitAll()
+//                .and()
+//                .logout() .permitAll()
+//                .and()
                 .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider),
                         UsernamePasswordAuthenticationFilter.class);
         // JwtAuthenticationFilter를 UsernamePasswordAuthenticationFilter 전에 넣는다
