@@ -18,21 +18,21 @@ Spring boot와 React 를 이용한 ([velog](https://velog.io)) 클론코딩 프�
 ### Backend
 
 * 강이현(github.com/kellykang-tech)
-  * CRUD 기능 구현 / cors 설정 / 
+  * CRUD 기능 구현 / cors 설정 / 로그인, 회원가입
 * 홍종완(github.com/jongwanhong)
-  * 환경설정 / 데이터 크롤링 / 
+  * 환경설정 / 데이터 크롤링 / 로그인, 회원가입
 
 ## API 설계
 
 | 기능             | Method | URL                     | 반환                    |
 | ---------------- | ------ | ----------------------- | ----------------------- |
 | 전체 게시글 조회 | GET    | /api/boards             | List<Board>             |
-| 특정 게시글 조회 | GET    | /api/detail/{id}        | Board                   |
+| 특정 게시글 조회 | GET    | /api/details/{id}        | Board                   |
 | 게시글 작성      | POST   | /api/boards             | Board                   |
 | 게시글 수정      | PUT    | /api/boards/{id}        | id                      |
 | 게시글 삭제      | DELETE | /api/boards/{id}        | id                      |
-| 로그인           | POST   | /users/login            | Username,password,token |
-| 회원가입         | POST   | /users/signup           | Username,password       |
+| 로그인           | POST   | /login            | Username,password,token |
+| 회원가입         | POST   | /signup           | Username,password       |
 | 댓글 조회        | GET    | /api/comments/{post_id} | List<Comment>           |
 | 댓글 작성        | POST   | /api/comments           | Comment                 |
 | 댓글 수정        | PUT    | /api/comments/{id}      | id                      |
