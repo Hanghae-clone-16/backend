@@ -8,13 +8,6 @@ Spring boot와 React 를 이용한 ([velog](https://velog.io)) 클론코딩 프�
 
 ## 팀원 역할
 
-### Frontend
-
-* 이정주(github.com/JeongJoo-Lee)
-  * 1
-* 길근용(github.com/TESZhao123)
-  * 1
-
 ### Backend
 
 * 강이현(github.com/kellykang-tech)
@@ -33,13 +26,8 @@ Spring boot와 React 를 이용한 ([velog](https://velog.io)) 클론코딩 프�
 | 게시글 삭제      | DELETE | /api/boards/{id}        | id                      |
 | 로그인           | POST   | /login            | Username,password,token |
 | 회원가입         | POST   | /signup           | Username,password       |
-| 댓글 조회        | GET    | /api/comments/{post_id} | List<Comment>           |
-| 댓글 작성        | POST   | /api/comments           | Comment                 |
-| 댓글 수정        | PUT    | /api/comments/{id}      | id                      |
-| 댓글 삭제        | DELETE | /api/comments/{id}      | id                      |
 
  
-
 ## 3계층 설계
 
 1. Controller
