@@ -5,8 +5,6 @@ import backend.velog.domain.model.User;
 import backend.velog.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,27 +19,6 @@ public class UserController {
     private final PasswordEncoder passwordEncoder;
     private final JwtTokenProvider jwtTokenProvider;
     private final UserRepository userRepository;
-
-    // 회원 로그인 페이지
-    @GetMapping("/login")
-    public String login() {
-        return "login";
-    }
-
-    // 에러 페이지
-    @GetMapping("/login/error")
-    public String loginError(Model model) {
-        model.addAttribute("loginError", true);
-        return "login";
-    }
-
-    // 회원 가입 페이지
-    @GetMapping("/signup")
-    public String signup() {
-        return "signup";
-    }
-
-
 
     // 회원가입
     @PostMapping("/signup")
