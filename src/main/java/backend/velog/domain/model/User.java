@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @Builder
 @Entity
-public class User implements UserDetails {
+public class User implements UserDetails { // 강의에서 UserDetailsImpl의 기능도 함게 함
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

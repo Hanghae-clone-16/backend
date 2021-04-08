@@ -12,7 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @RequiredArgsConstructor
-@EnableWebSecurity
+@EnableWebSecurity//스프링부트가 제공해주는 기본 스프링 시큐리티 설정은 날아가고 커스터마이징
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final JwtTokenProvider jwtTokenProvider;
@@ -38,18 +38,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) // 토큰 기반 인증이므로 세션 역시 사용하지 않습니다.
                 .and()
                 .authorizeRequests() // 요청에 대한 사용권한 체크
-                .antMatchers("/h2-console/**").permitAll()
-                .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/user/**").hasRole("USER")
+                    .antMatchers("/","/home","/css/**","/h2-console/**").permitAll()
+                    .antMatchers("/signup").permitAll()
                 .anyRequest().permitAll()
                 .and()
-//                .formLogin()//스프링 시큐리티에서 기본으로 제공하는 로그인페이지
-//                //.loginPage("url")
-//                //.failureUrl("url")
-//                .defaultSuccessUrl("/") .permitAll()
-//                .and()
-//                .logout() .permitAll()
-//                .and()
+//                .formLogin()
+//                    .loginPage("/login")
+//                    .failureUrl("/login/error")
+//                    .defaultSuccessUrl("/")
+//                    .permitAll()
+//                    .and()
+//                .logout()
+//                    .logoutUrl("/logout")
+//                    .logoutSuccessUrl("/")
+//                    .permitAll()
+//                    .and()
                 .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider),
                         UsernamePasswordAuthenticationFilter.class);
         // JwtAuthenticationFilter를 UsernamePasswordAuthenticationFilter 전에 넣는다
